@@ -84,6 +84,22 @@ function randomise()
   // document.getElementById("next").onclick = function() { start_sort(); };
 };
 
+function change_interval()
+{
+  if(insertion_artefact.prev == -1 && (insertion_artefact.action == 1 || insertion_artefact.action == -1)){
+    if(insertion_artefact.interval != 0) { clearInterval(insertion_artefact.interval); }
+    
+    if(document.getElementById("interval").value != 100)
+    {
+      insertion_artefact.interval = setInterval(next_step, 2600-document.getElementById("interval").value); 
+      document.getElementById("pause").style.backgroundColor = "#288ec8";     
+    }
+    else
+      document.getElementById("pause").style.backgroundColor = "grey";
+  }
+};
+
+
 function start_sort()
 {
   if(insertion_artefact.interval != 0) { clearInterval(insertion_artefact.interval); insertion_artefact.interval = 0; }
@@ -157,10 +173,10 @@ function submit(){
   var answer_array = insertionSorts(insertion_artefact.num);
   var answer = answer_array[insertion_artefact.targetinsertions-1];
   console.log(answer_array,answer);
-  console.log(eval(text1),answer);
+  console.log(parseInt(text1),answer);
   
 
- if(eval(text1) === answer){
+ if(parseInt(text1) === answer){
   start_sort();
   document.getElementById("ins").innerHTML =  "<b>This answer is correct! </b>"  
  }else{
@@ -178,17 +194,16 @@ function next_step(){
     insertion_artefact.finished=true;
     insertion_sort();
     return;
-  }
+  } 
   if(insertion_artefact.action == 1)
   {
-    
     insertion_artefact.index = insertionIndex(insertion_artefact.iterator1);
     if(insertion_artefact.index!=insertion_artefact.iterator1){ 
       
       insertion_artefact.action = -1;
     }else{
       if(insertion_artefact.iterator1>0){
-      document.getElementById("ins").innerHTML = "<p>" +  "Since " +document.getElementById( insertion_artefact.card[insertion_artefact.iterator1]).innerHTML+   " is greater than  "  + document.getElementById(insertion_artefact.card[insertion_artefact.iterator1-1]).innerHTML + "</p>" + "No Action is taken" + "</p>" +  "No of Comparisons : " + insertion_artefact.comparisons + "</p>" + "No of insertions : " + insertion_artefact.insertions;
+      document.getElementById("ins").innerHTML = "<p>" +  "Since " +document.getElementById( insertion_artefact.card[insertion_artefact.iterator1]).innerHTML+   "<b> is greater than or equal to </b>  "  + document.getElementById(insertion_artefact.card[insertion_artefact.iterator1-1]).innerHTML + "</p>" + "No Action is taken" + "</p>" +  "No of Comparisons : " + insertion_artefact.comparisons + "</p>" + "No of insertions : " + insertion_artefact.insertions;
       }
       insertion_sort();
     }
@@ -202,7 +217,9 @@ function next_step(){
     insertion_artefact.finished = false;
     insertion_sort();
   }
+  console.log(insertion_artefact.num);
 }
+
 
 function resetcolor(){
  
@@ -218,32 +235,62 @@ function clearCanvas(){
 }
 
 
+function index_insertion(i){
 
-//finds the right index to insert the element 
-function insertionIndex(i){
-  clearCanvas();
- 
   if(i===0){
     return 0;
   }
   for(let j = i-1;j>=0;j--){
-   
-    //console.log(insertion_artefact.card[j].innerHTML);
-    document.getElementById("ins").innerHTML = "<p>" +  "Comparing " + document.getElementById(insertion_artefact.card[i]).innerHTML + " with " + document.getElementById(insertion_artefact.card[j]).innerHTML + "</p>" + "No of Comparisons : " + insertion_artefact.comparisons + "</p>" + "No of insertions : " + insertion_artefact.insertions;
+    if(j===0 && insertion_artefact.num[i]<insertion_artefact.num[j]){
+     
+      return 0;
 
+    }
+    
+    if(insertion_artefact.num[i]>=insertion_artefact.num[j]){
+     
+      return j+1;
+    }
+   
+}
+}
+
+
+//finds the right index to insert the element 
+
+function insertionIndex(i){
+  let index = index_insertion(i);
+  console.log("index");
+  console.log(index_insertion(i));
+  clearCanvas();
+  
+  if(i===0){
+    return 0;
+  }
+  for(let j = i-1;j>=0;j--){
     resetcolor();
     insertion_artefact.comparisons++;
    
     document.getElementById(insertion_artefact.card[i]).style.backgroundColor =  "#a4c652";
     document.getElementById(insertion_artefact.card[j]).style.backgroundColor =   "#a4c652";
     if(j===0 && eval(document.getElementById(insertion_artefact.card[i]).innerHTML)<eval(document.getElementById(insertion_artefact.card[j]).innerHTML)){
+      console.log("in here scammm")
+      document.getElementById("ins2").innerHTML = ""
+      document.getElementById("ins").innerHTML = "<p>" +  "Comparing " + document.getElementById(insertion_artefact.card[i]).innerHTML + " with " + "<b>"+ document.getElementById(insertion_artefact.card[j]).innerHTML + "</b>" + "</p>" + "No of Comparisons : " + insertion_artefact.comparisons + "</p>" + "No of insertions : " + insertion_artefact.insertions;
      
       return 0;
 
     }
     
     if(eval(document.getElementById(insertion_artefact.card[i]).innerHTML)>=eval(document.getElementById(insertion_artefact.card[j]).innerHTML)){
-     
+      if(index === i){
+        console.log("in here2");
+        document.getElementById("ins2").innerHTML =   "Comparing " + document.getElementById(insertion_artefact.card[i]).innerHTML + " with " + "<b>"+  document.getElementById(insertion_artefact.card[j]).innerHTML + "</b>"; 
+      }else{
+        console.log("in here 3");
+        document.getElementById("ins2").innerHTML = "<p>" + "After comparing " + document.getElementById(insertion_artefact.card[i]).innerHTML + " with " + "<b>" + insertion_artefact.num.slice(index,i).reverse() + "</b>"+ " <font> => </font>"+   "Comparing " + document.getElementById(insertion_artefact.card[i]).innerHTML + " with " +"<b>"+  document.getElementById(insertion_artefact.card[j]).innerHTML + "</b>"; 
+      }
+      document.getElementById("ins").innerHTML =  "</p>" + "No of Comparisons : " + insertion_artefact.comparisons + "</p>" + "No of insertions : " + insertion_artefact.insertions;
       return j+1;
     }
    
@@ -251,6 +298,40 @@ function insertionIndex(i){
   
 }
 
+function insertion(i,j){
+  clearCanvasCanv();
+  sort_insertion(i,j);
+  resetcolor();
+ 
+  document.getElementById(insertion_artefact.card[j]).style.backgroundColor =  "#FFA500";
+  drawArrow(i,j);
+  insertion_artefact.insertions++;
+  if(j==0){
+    document.getElementById("ins").innerHTML = "<p>" + "Since " + document.getElementById(insertion_artefact.card[i]).innerHTML + " <b> is lesser than </b> " + document.getElementById(insertion_artefact.card[j]).innerHTML + "</p>"+ " Inserting " + document.getElementById(insertion_artefact.card[i]).innerHTML +   " before "  + document.getElementById(insertion_artefact.card[j]).innerHTML + "</p>" +  "No of Comparisons : " + insertion_artefact.comparisons + "</p>" + "No of insertions : " + insertion_artefact.insertions;
+  }else{
+    document.getElementById("ins").innerHTML = "<p>" + "Since " + document.getElementById(insertion_artefact.card[i]).innerHTML + "  <b> is lesser than  </b>" + document.getElementById(insertion_artefact.card[j]).innerHTML + "</p>"+ " Inserting " + document.getElementById(insertion_artefact.card[i]).innerHTML +   " before "  + document.getElementById(insertion_artefact.card[j]).innerHTML + " and after " + document.getElementById(insertion_artefact.card[j-1]).innerHTML+ "</p>" +  "No of Comparisons : " + insertion_artefact.comparisons + "</p>" + "No of insertions : " + insertion_artefact.insertions;
+  }
+  document.getElementById(insertion_artefact.card[j]).style.backgroundColor =  "#FFA500";
+  let temp = eval(document.getElementById(insertion_artefact.card[i]).innerHTML);
+  
+  for(var n = i-1;n>=j;n--){
+    document.getElementById(insertion_artefact.card[n+1]).innerHTML = eval(document.getElementById(insertion_artefact.card[n]).innerHTML);
+  }
+  document.getElementById(insertion_artefact.card[j]).innerHTML = temp;
+}
+
+
+
+function sort_insertion(i,j){
+  let temp = insertion_artefact.num[i];
+  for(var n = i-1;n>=j;n--){
+   insertion_artefact.num[n+1] = insertion_artefact.num[n]
+  }
+  insertion_artefact.num[j] = temp;
+}
+
+
+   
 
 
 
