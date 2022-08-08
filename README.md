@@ -7,7 +7,7 @@
 <b> Experiment|     <b> Insertion Sort Algorithm
 
 <h5> About the Experiment : </h5> 
-This experiment is to learn Insertion Sort and the associated Time and Space Complexity of the Insertion Sort Algorithm by use of Demos, Practice, and Hands on Exercises to undertand the Insertion sort Algorithms easily.  <br> <br>
+This experiment is to learn Insertion Sort and the associated Time and Space Complexity of the Insertion Sort Algorithm by use of Demos, Practice, and Hands on Exercises to understand the Insertion sort Algorithms easily.  <br> <br>
 
 <b>Name of Developer | <b> Prof. Venkatesh Choppella 
 :--|:--|
