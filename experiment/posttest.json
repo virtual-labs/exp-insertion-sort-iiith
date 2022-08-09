@@ -2,20 +2,88 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What does the array [9, 12, 3, 4, 7, 5, 6] look like after three iterations of Insertion Sort?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "[3, 4, 9, 12, 7, 5, 6]",
+        "b": "[3, 9, 12, 4, 7, 5, 6]",
+        "c": "[9, 12, 4, 3, 7, 5, 6]",
+        "d": "[3, 4, 5, 6, 9, 12, 7]"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct",
+        "b": "Incorrect. Remember 3 iterations sorts the first 4 elements.",
+        "c": "Incorrect. Remember 3 iterations sorts the first 4 elements.",
+        "d": "Incorrect. Remember an iteration sorts a given element with respect to those to its left."
       },
       "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Three iterations of Insertion Sort yields the array [1, 3, 5, 8, 4, 11, 6]. What does the array look like after the fourth iteration?",
+      "answers": {
+        "a": "[1, 3, 5, 8, 11, 6, 4]",
+        "b": "[1, 3, 4, 5, 8, 11, 6]",
+        "c": "[1, 3, 4, 5, 6, 8, 11]",
+        "d": "[1, 3, 5, 6, 3, 8, 11]"
+      },
+      "explanations": {
+        "a": "Incorrect",
+        "b": "Correct",
+        "c": "Incorrect",
+        "d": "Incorrect"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "After K iterations of Insertion Sort, how many elements have been sorted(Relative to the left of the current index)?",
+      "answers": {
+        "a": "K-1 elements",
+        "b": "K elements",
+        "c": "K+1 elements",
+        "d": "K+2 elements"
+      },
+      "explanations": {
+        "a": "Incorrect",
+        "b": "Incorrect",
+        "c": "Correct",
+        "d": "Incorrect"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What type of array is optimal for Insertion Sort?",
+      "answers": {
+        "a": "a completely unsorted array",
+        "b": "an unsorted array",
+        "c": "an almost sorted array",
+        "d": "a sorted array"
+      },
+      "explanations": {
+        "a": "Incorrect",
+        "b": "Incorrect",
+        "c": "Incorrect",
+        "d": "Correct"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is insertion sort's time complexity in Big O notation?",
+      "answers": {
+        "a": "Best: O(N^2) Average: O(N) Worst: O(N) ",
+        "b": "Best: O(N) Average: O(N^2) Worst: O(N^2) ",
+        "c": "Best: O(N^2) Average: O(N^2) Worst: O(N^2) ",
+        "d": "Best: O(N) Average: O(N) Worst: O(N) "
+      },
+      "explanations": {
+        "a": "Incorrect",
+        "b": "Correct",
+        "c": "Incorrect",
+        "d": "Incorrect"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {

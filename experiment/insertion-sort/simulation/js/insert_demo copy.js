@@ -157,8 +157,8 @@ function start_sort()
 
  
   clearCanvasCanv();
-  addindexlabel(insertion_artefact.iterator1,index,midx_boxi-7,35,"i")
-  addindexlabel(insertion_artefact.iterator1,index,midx_boxj-7,35,"j")
+  addindexlabel(insertion_artefact.iterator1,index,midx_boxi-7,35,"Current")
+  addindexlabel(insertion_artefact.iterator1,index,midx_boxj-7,35,"Compared")
   
  
   console.log("called once ")
@@ -350,7 +350,8 @@ function drawArrow(i,j){
 function addindexlabel(i,j,x,y,label){
   var canvas = document.getElementById("Canv");
   var ctx = canvas.getContext("2d");
-  ctx.font = "20px Arial";  
+  ctx.font = "12px Arial";  
+  // Add color ctx.font.color etc
   ctx.fillText(label,x,y);
 }
 
