@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Add CSS at the head of HTML file -->
+   <title>Insertion Sort Demo</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css /insert_css.css">
+      
+      <link rel="stylesheet" href="../../assets/css/common-styles-">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.7-b/css/style.min.css">
+      
+</head>
+<body>
+		<!-- Your code goes here-->
+<div class="instruction-box">
+      <button class="collapsible"> Instructions </button>
+      <div class="content">
+        <ul>
+          <li>Click on the <b>Start</b> button to start the
+          demo.
+          <li>Move the slider to adjust the speed of the
+          demo.
+          <li>Click on the <b>Pause</b> button if you want to stop
+          and manually click the Next button to have a step by
+          step realization of the process.
+          <li>Click on the <b>Reset</b> button to start all over
+          with a new set of random numbers!
+          <li>The comparisons are represented with the color <FONT COLOR="#a4c652"> GREEN </FONT> and  the insertions are represented with the color  <FONT COLOR="#FFA500"> ORANGE </FONT> </li>
+        
+
+        </ul>
+      </div> 
+    </div>
+    <canvas id="Canv" width="1200" height="40"></canvas>
+
+    <div id="wrapper">
+      <div id="cards">
+      </div>
+      <canvas id="myCanvas" width="1200" height="150"></canvas>
+      <div id="legend-comment-wrapper">
+        <ul class="legend">
+          <table>
+            <th><tr><b>Legend:</b></tr></th>
+            <tr><td><span class="green"></span>&ensp;Comparisons</td></tr>
+            <tr><td><span class="orange"></span>&ensp;Insertions</td></tr>
+            <tr><td><span class="blue"></span>&ensp;Element in Array</td></tr>
+          </table>
+        </ul>
+
+         <div class="comment-box" id="comment-box-bigger">
+           <b>Observations</b>
+           <p id="ins2"></p>
+           <br>
+           <p id="ins"></p>
+         </div>
+         
+      </div>
+      <div class="slidecontainer">
+        <p>
+          Min. Speed
+          <input class="slider " type="range" min="50" max="2500" id="interval" value="1500">
+          Max. Speedx
+        </p>
+      </div>
+      
+      <div class="buttons-wrapper">
+        <input class="button-input v-button" type="button" value="Start" id="next">
+        <input class="button-input v-button" type="button" value="Reset" id="reset">
+        <input class="button-input v-button" type="button" value="Pause" id="pause"> 
+      </div> 
+      
+    </div>
+	<!-- Add JS at the bottom of HTML file --> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="js/insert_demo copy.js"></script>
+        
+</body>
+</html>
