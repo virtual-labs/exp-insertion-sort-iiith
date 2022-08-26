@@ -20,7 +20,7 @@
       "source": "recap.md",
       "target": "recap.html"
     },
-	{
+    {
       "unit-type": "task",
       "label": "Pretest",
       "content-type": "assesment",
@@ -39,15 +39,15 @@
           "unit-type": "task",
           "label": "Concept",
           "content-type": "video",
-          "source": "concept.md",
+          "source": "overview.md",
           "target": "overview.html"
         },
-	{
+    {
           "unit-type": "task",
           "label": "Algorithm",
           "content-type": "video",
-          "source": "algorithm.md",
-          "target": "algorithm.html"
+          "source": "insertion-sort-algorithm.md",
+          "target": "insertion-sort-algorithm.html"
         },
         
         {
@@ -57,7 +57,7 @@
           "source": "simulation/insertiondemo.html",
           "target": "insertiondemo.html"
         },
-	
+    
         {
           "unit-type": "task",
           "label": "Practice",
@@ -65,14 +65,14 @@
           "source": "simulation/insertionpractice.html",
           "target": "insertionpractice.html"
         },
-	{
+    {
           "unit-type": "task",
           "label": "Exercise",
           "content-type": "simulation",
           "source": "simulation/insertionexercise.html",
           "target": "insertionexercise.html"
         }
-
+      
       ]
     },
    
@@ -84,18 +84,18 @@
         {
           "unit-type": "aim"
         },
-        {
+    {
           "unit-type": "task",
-          "label": "Time and Space Complexity",
+          "label": "Overview",
           "content-type": "video",
-          "source": "analysis.md",
+          "source": "time-and-space-complexity.md",
           "target": "time-and-space-complexity.html"
         },
-  {
+        {
           "unit-type": "task",
           "label": "Comparison with other Algorithms",
           "content-type": "video",
-          "source": "comparison.md",
+          "source": "comparison-with-other-algorithms.md",
           "target": "comparison-with-other-algorithms.html"
         }
       ]
