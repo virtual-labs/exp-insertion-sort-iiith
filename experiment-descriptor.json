@@ -35,21 +35,21 @@
         {
           "unit-type": "aim"
         },
-        {
-          "unit-type": "task",
-          "label": "Concept",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
-    {
-          "unit-type": "task",
-          "label": "Algorithm",
-          "content-type": "video",
-          "source": "insertion-sort-algorithm.md",
-          "target": "insertion-sort-algorithm.html"
-        },
         
+    {
+      "unit-type": "task",
+      "label": "Overview",
+      "content-type": "video",
+      "source": "overview.md",
+      "target": "overview.html"
+    },
+         {
+      "unit-type": "task",
+      "label": "Overview",
+      "content-type": "video",
+      "source": "insertion-sort-algorithm.md",
+      "target": "insertion-sort-algorithm.html"
+    },
         {
           "unit-type": "task",
           "label": "Demo",
@@ -76,30 +76,7 @@
       ]
     },
    
-        {
-      "unit-type": "lu",
-      "label": "Analysis",
-      "basedir": "analysis",
-      "units": [
-        {
-          "unit-type": "aim"
-        },
-    {
-          "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "time-and-space-complexity.md",
-          "target": "time-and-space-complexity.html"
-        },
-        {
-          "unit-type": "task",
-          "label": "Comparison with other Algorithms",
-          "content-type": "video",
-          "source": "comparison-with-other-algorithms.md",
-          "target": "comparison-with-other-algorithms.html"
-        }
-      ]
-    },
+        
 {
       "unit-type": "task",
       "label": "Posttest",
