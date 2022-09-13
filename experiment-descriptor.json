@@ -45,7 +45,7 @@
     },
          {
       "unit-type": "task",
-      "label": "Overview",
+      "label": "Algorithm",
       "content-type": "video",
       "source": "insertion-sort-algorithm.md",
       "target": "insertion-sort-algorithm.html"
