@@ -57,8 +57,7 @@
       "answers": {
         "a": "Accessing an element is O(1)",
         "b": "Searching for an element is O(N)",
-        "c": "answer3",
-        "d": "answer4"
+       
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -69,22 +68,6 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
-    {
-      "question": "5. This is a Sample Question 5?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
+    
   ]
 }
