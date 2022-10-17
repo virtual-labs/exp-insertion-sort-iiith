@@ -56,7 +56,7 @@
       "question": "4. Which is false about an array?",
       "answers": {
         "a": "Accessing an element is O(1)",
-        "b": "Searching for an element is O(N)",
+        "b": "Searching for an element is O(N)"
        
       },
       "explanations": {
@@ -67,7 +67,7 @@
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
-    },
+    }
     
   ]
 }
