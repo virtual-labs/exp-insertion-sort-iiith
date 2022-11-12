@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. You are given the array [7, 2, 13, 5, 6, 11, 3, '4', 9, 1].  What is the index of '4', given the array begins at index 0?",
+      "answers": {
+        "a": "8",
+        "b": "7",
+        "c": "3",
+        "d": "4"
+      },
+      "explanations": {
+        "a": "'4' is not at index 8. Remember that the array begins at index 0, not 1",
+        "b": "Correct!",
+        "c": "'4' is not at index 3. Remember that the array index begins from the left side of the array",
+        "d": "'4' is not at index 4. Remember that the value of an element has no correlation to position"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. If an array of N elements is completely traversed for each element in the array, what is the time complexity of the algorithm?",
+      "answers": {
+        "a": "O(1)",
+        "b": "O(logN)",
+        "c": "O(N)",
+        "d": "O(N^2)"
+      },
+      "explanations": {
+        "a": "Incorrect",
+        "b": "Incorrect. The algorithm traverses the same amount of elements every iteration, so the algorithm is not logarithmic",
+        "c": "Incorrect. The algorithm traverses N elements N times.",
+        "d": "Correct, this is a quadratic time complexity algorithm."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Given the array [7, 4, 8, 5, 6],  Which option is correctly sorted in ascending order?",
+      "answers": {
+        "a": "[8, 7, 6, 5, 4]",
+        "b": "[4, 4, 5, 5, 5, 6, 7, 8]",
+        "c": "[4, 5, 6, 7, 8]",
+        "d": "Depends on which data structure is used"
+      },
+      "explanations": {
+        "a": "Incorrect. The array must be sorted in an ascending(Increasing) order ",
+        "b": "Incorrect. The sorted array should have the same number of elements as the given array.",
+        "c": "Correct!",
+        "d": "Incorrect. While different data structures sort the data differently, their end results are identical"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which is false about an array?",
+      "answers": {
+        "a": "Accessing an element is O(1)",
+        "b": "Searching for an element is O(N)"
+       
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+    
+  ]
+}
